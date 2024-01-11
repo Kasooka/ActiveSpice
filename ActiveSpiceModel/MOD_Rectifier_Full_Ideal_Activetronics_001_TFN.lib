@@ -1,0 +1,18 @@
+*  MOD_Rectifier_Full_Ideal_Activetronics_001_TFN
+*****************************************************************************
+* (C) Thierry FLAVEN Activetronics.com
+*****************************************************************************
+* This model is an Ideal full wave rectifier for simulation of other IC only
+*****************************************************************************
+
+*  MOD_AmpOp_Ideal_Activetronics_001_TFN
+*****************************************************************************
+* (C) Thierry FLAVEN Activetronics.com
+.SUBCKT  Rectifier_Full_Ideal I S
+*                             I is the  input
+*                              S in the output
+
+***
+B1 S 0 V = V(I) > 0 ?  V(I) : -V(I)
+
+.ENDS Rectifier_Full_Ideal
