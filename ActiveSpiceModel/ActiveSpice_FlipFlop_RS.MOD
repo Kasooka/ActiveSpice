@@ -1,4 +1,4 @@
-*  MOD_RSFlipFlop_Activetronics_001_TFN
+*  ActiveSpice_FlipFlop_RS.MOD
 *****************************************************************************
 * (C) Thierry FLAVEN Activetronics.com
 *****************************************************************************
@@ -14,7 +14,7 @@
 *                             Out the non inv-ouput
 *                                 Qout is the inverted output
 *
-.SUBCKT RSFlipFlop VCC G Set Res Out Q
+.SUBCKT RSFlipFlop VCC G Set Res Q nQ
 ***
 B0 Outi G V = V(Out)
 B1 Out G V = (V(Set) > V(VCC)/2 || V(Outi) > V(VCC)/2 )  && (V(Res) < V(VCC)/2)  ?  V(VCC) : 0

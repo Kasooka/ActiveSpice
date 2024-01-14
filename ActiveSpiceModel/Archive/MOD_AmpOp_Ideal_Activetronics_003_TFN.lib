@@ -31,12 +31,14 @@
 *                              S in the output
 
 ***
-B1 Snolimit 0 V = V(P) * 10000 - V(M) * 10000
+*B1 Snolimit 0 V = ((V(P) - V(G)) - (V(M) - V(G))) * 1000
+B1 Snolimit 0 V = V(P) * 100000 - V(M) * 100000
 B2 SLowLimit 0 V = V(Snolimit) < V(G) ? V(G) : V(Snolimit)
+*B0 S 0 V = V(SLowLimit) > V(VCC) ? V(VCC) : V(SLowLimit)
 B3 StopLimit 0 V = V(SLowLimit) > V(VCC) ? V(VCC) : V(SLowLimit)
-R1 StopLimit OutR 0.1
-L1 OutR S 100n
-C1 S 0 1p
+R1 StopLimit OutR 0.01
+L1 OutR S 0.001f
+C1 S 0 1f
 
 *B0 S 0 V = V(StopLimit)
 .ENDS AmpOp_Ideal

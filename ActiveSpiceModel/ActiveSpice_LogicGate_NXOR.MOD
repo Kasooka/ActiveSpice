@@ -1,4 +1,4 @@
-*  MOD_XOR_GATE_Activetronics_001_TFN
+*  ActiveSpice_LogicGate_NXOR.MOD
 *****************************************************************************
 * (C) Thierry FLAVEN Activetronics.com
 *****************************************************************************
@@ -13,10 +13,10 @@
 *                         B is the input B trigger at 1/2 VCC both way
 *                           S in the output
 **
-.SUBCKT XNOR_GATE VCC G A B S
+.SUBCKT XNOR VCC G A B S
 
 B0 AA G V = V(A) > V(VCC)/2 ? V(VCC)/2 :0
 B1 BB G V = V(B) > V(VCC)/2 ? V(VCC)/2 :0
 B2 S G V = V(AA) < V(BB) || V(AA) > V(BB) ? 0 : V(VCC)
 
-.ENDS XNOR_GATE
+.ENDS XNOR

@@ -1,8 +1,8 @@
-*  MOD_NANDgate_Activetronics_001_TFN
+*  ActiveSpice_LogicGate_AND.MOD
 *****************************************************************************
 * (C) Thierry FLAVEN Activetronics.com
 *****************************************************************************
-** This model is designed as a NAND gate trigger at half VCC without logic level  
+** This model is designed as a AND gate trigger at half VCC without windows threshold
 ** For simulation of other IC the result from this one shouldn't be considered
 **
 *****************************************************************************
@@ -14,8 +14,8 @@
 *                       B is the input B trigger at 1/2 VCC both way
 *                         S in the output
 *
-.SUBCKT NANDgate VCC G A B S
+.SUBCKT AND VCC G A B S
 ***
-B0 S G V = V(A)> V(VCC)/2 && V(B)> V(VCC)/2 ? 0 : V(VCC)
+B0 S G V = V(A)> V(VCC)/2 && V(B)> V(VCC)/2 ? V(VCC) : 0
 
-.ENDS NANDgate
+.ENDS AND

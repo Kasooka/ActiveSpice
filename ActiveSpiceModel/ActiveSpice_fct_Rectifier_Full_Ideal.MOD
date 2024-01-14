@@ -1,4 +1,4 @@
-*  MOD_Rectifier_Full_Ideal_Activetronics_001_TFN
+*  ActiveSpice_fct_Rectifier_Full_Ideal.MOD
 *****************************************************************************
 * (C) Thierry FLAVEN Activetronics.com
 *****************************************************************************
@@ -8,11 +8,11 @@
 *  MOD_AmpOp_Ideal_Activetronics_001_TFN
 *****************************************************************************
 * (C) Thierry FLAVEN Activetronics.com
-.SUBCKT  Rectifier_Full_Ideal I S
+.SUBCKT  Rectifier I S
 *                             I is the  input
 *                              S in the output
 
 ***
 B1 S 0 V = V(I) > 0 ?  V(I) : -V(I)
 
-.ENDS Rectifier_Full_Ideal
+.ENDS Rectifier
